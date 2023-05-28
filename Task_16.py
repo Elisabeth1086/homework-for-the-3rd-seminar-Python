@@ -9,10 +9,10 @@
 #     3
 #     -> 1
 
+import random
 n = int(input('Введите количество элементов в массиве: '))
 x = int(input('Введите число, которое хотите найти в массиве: '))
 
-import random
 a = []
 count = 0
 for i in range(n):
