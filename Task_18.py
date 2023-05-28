@@ -9,13 +9,23 @@
 #     6
 #     -> 5
 
-l = input()
-numbers = list(map(int, input().strip().split()))
-x = int(input().strip())
+import random
+n = int(input('Введите количество элементов в массиве: '))
+x = int(input('Введите число: '))
 
-res = numbers[0]
-for i in numbers:
-    if abs(i - x) < abs(res - x):
-        res = i
+a=[]
+for i in range(n):
+    a.append(random.randint(1, n+1))
+print(a)
 
-print(res)
+number = a[0]
+for i in a:
+    if abs(i-x) < abs(number-x):                           
+        number=i
+print(number)
+
+# Функция abs () — это встроенная функция, возвращающая абсолютное значение числа. 
+# Она принимает целые, с плавающей точкой и комплексные числа на вход. 
+# Если передать в abs () целое число или число с плавающей точкой, то функция вернет не-отрицательное значение n и сохранит тип. 
+# Для целого числа — целое число. 
+# Для числа с плавающей точкой — число с плавающей точкой.>>> abs (20) 20>>> abs (20.0) 20.0>>> abs (-20.0) 20.0.
